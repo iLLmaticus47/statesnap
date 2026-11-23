@@ -1,0 +1,48 @@
+﻿[package]
+name = "statesnap"
+version = "0.1.0"
+edition = "2021"
+description = "Snapshot and restore game save files with a single hotkey"
+license = "MIT"
+repository = "https://github.com/iLLmaticus47/statesnap"
+build = "build.rs"
+
+[dependencies]
+native-windows-gui = { version = "1.0.13", default-features = false, features = [
+    "high-dpi",
+    "combobox",
+    "list-view",
+    "menu",
+    "tray-notification",
+    "message-window",
+    "notice",
+    "file-dialog",
+    "cursor",
+    "tooltip",
+] }
+winapi = { version = "0.3", features = [
+    "winuser",
+    "processthreadsapi",
+    "winbase",
+    "handleapi",
+    "synchapi",
+    "errhandlingapi",
+    "winerror",
+    "winnt",
+    "winnls",
+    "shellapi",
+] }
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+winreg = "0.52"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+
+[build-dependencies]
+embed-manifest = "1.4"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
