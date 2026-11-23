@@ -4,6 +4,16 @@ A small Windows tray tool that copies a game's save files into a named snapshot 
 
 It uses native Windows controls only. While idle it uses no CPU and a few MB of memory.
 
+![StateSnap](docs/window.png)
+
+## Screenshots
+
+The screenshots use made-up games and snapshots.
+
+| Naming a snapshot | Settings |
+|---|---|
+| ![Naming a snapshot](docs/snapshot-name.png) | ![Settings](docs/settings.png) |
+
 ## Download
 
 Get `statesnap.exe` from the [latest release](https://github.com/iLLmaticus47/statesnap/releases/latest)
