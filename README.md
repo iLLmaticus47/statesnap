@@ -4,7 +4,16 @@ A small Windows tray tool that copies a game's save files into a named snapshot 
 
 It uses native Windows controls only. While idle it uses no CPU and a few MB of memory.
 
-## Run it
+## Download
+
+Get `statesnap.exe` from the [latest release](https://github.com/iLLmaticus47/statesnap/releases/latest)
+and run it. There is nothing to install: the exe is self-contained (about 650 KB) and can be kept
+anywhere. Only one copy runs at a time; starting it again opens the existing window.
+
+The exe is not code-signed, so Windows SmartScreen may warn the first time you run it. Click
+**More info → Run anyway**.
+
+## Build it yourself
 
 You need [Rust](https://rustup.rs). Then:
 
@@ -12,8 +21,6 @@ You need [Rust](https://rustup.rs). Then:
 cargo build --release
 target\release\statesnap.exe
 ```
-
-The exe is self-contained (about 650 KB) and can be moved anywhere. Only one copy runs at a time; starting it again opens the existing window.
 
 ## Shortcuts
 
